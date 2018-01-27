@@ -15,9 +15,13 @@ class Controller extends BaseController
     public function changeName(Request $request)
     {
         if($request->input('name') == 'José Luis Macedo') {
+
             return response()->json(['name' => 'José Macedo']);
+
         }else{
+
             return response()->json(['name' => 'José Luis Macedo']);
+
         }
     }
 }
