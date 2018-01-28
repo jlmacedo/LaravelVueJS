@@ -1,17 +1,25 @@
 <template>
-    <div id="app">
-        <home-name v-for="home in 5" :key="home"></home-name>
+    <div id="app" class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <h1>Routing</h1>
+                <hr>
+                <app-header></app-header>
+                <hr>
+                <router-view></router-view>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-    import Home from './Home.vue';
+    import Header from './Header.vue';
 
     export default {
         name: "app",
         components:
         {
-            'home-name': Home
+            appHeader: Header
         }
     }
 </script>
