@@ -2,6 +2,7 @@
     <div>
         <p>Name: {{ name }}</p>
         <button @click="changeName()">Change</button>
+        <hr>
     </div>
 </template>
 
@@ -12,9 +13,9 @@
         name: "home",
         data: function()
         {
-          return {
-              name: 'José Luis Macedo'
-          }
+            return {
+                name: 'José Luis Macedo'
+            }
         },
         methods:
         {
@@ -23,7 +24,7 @@
                 axios.post('change-name',{ name: this.name})
                     .then(response => { this.name = response.data.name })
                     .catch(e => { this.errors.push(e)});
-            }
+            },
         }
     }
 </script>

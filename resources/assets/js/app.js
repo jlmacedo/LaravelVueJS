@@ -7,12 +7,9 @@
 
 require('./bootstrap');
 
-import App from './components/App.vue';
-import Home from './components/Home.vue';
-
 window.Vue = require('vue');
 
-Vue.component('home-name', Home);
+import App from './components/App.vue';
 
 //import VueRouter from 'vue-router';
 
@@ -22,7 +19,7 @@ Vue.component('home-name', Home);
 
 //const app = new Vue({ router }).$mount('#app')
 
-const app = new Vue({
+new Vue({
     el: '#app',
     render: h => h(App)
 })
